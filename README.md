@@ -1,7 +1,5 @@
 # SOLID
 
-In this project, I explained the Solid principles in theory and coding.
-
 SOLID Principles
 There are five SOLID principles:
 
