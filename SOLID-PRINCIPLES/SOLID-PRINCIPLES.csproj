@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{14A4F9FC-F178-4051-B335-58FF8A4E4925}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SOLID_PRINCIPLES</RootNamespace>
+    <AssemblyName>SOLID-PRINCIPLES</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="1-SingleResponsiblePrinciple\BadExample\BadTeacherProcess.cs" />
+    <Compile Include="1-SingleResponsiblePrinciple\GoodExample\GoodLogerProcess.cs" />
+    <Compile Include="1-SingleResponsiblePrinciple\GoodExample\GoodTeacherProcess.cs" />
+    <Compile Include="1-SingleResponsiblePrinciple\Model\Teacher.cs" />
+    <Compile Include="2-OpenClosedPrinciple\BadExample\BadTea.cs" />
+    <Compile Include="2-OpenClosedPrinciple\GoodExample\Abstract\GoodTea.cs" />
+    <Compile Include="2-OpenClosedPrinciple\GoodExample\Concrete\Black.cs" />
+    <Compile Include="2-OpenClosedPrinciple\GoodExample\Concrete\Green.cs" />
+    <Compile Include="2-OpenClosedPrinciple\GoodExample\Concrete\Herbal.cs" />
+    <Compile Include="3-LiskovSubstitutionPrinciple\BadExample\BadAreaCalculator.cs" />
+    <Compile Include="3-LiskovSubstitutionPrinciple\BadExample\BadRectangle.cs" />
+    <Compile Include="3-LiskovSubstitutionPrinciple\BadExample\BadSquare.cs" />
+    <Compile Include="3-LiskovSubstitutionPrinciple\GoodExample\Abstract\Shape.cs" />
+    <Compile Include="3-LiskovSubstitutionPrinciple\GoodExample\Concrete\Rectangel.cs" />
+    <Compile Include="3-LiskovSubstitutionPrinciple\GoodExample\Concrete\Square.cs" />
+    <Compile Include="4-InterfaceSegregationPrinciple\BadExample\Concrete\BaseballCap.cs" />
+    <Compile Include="4-InterfaceSegregationPrinciple\BadExample\Concrete\Jeans.cs" />
+    <Compile Include="4-InterfaceSegregationPrinciple\BadExample\Interfaces\IProduct.cs" />
+    <Compile Include="4-InterfaceSegregationPrinciple\GoodExample\Concrete\BaseballCap.cs" />
+    <Compile Include="4-InterfaceSegregationPrinciple\GoodExample\Concrete\Jeans.cs" />
+    <Compile Include="4-InterfaceSegregationPrinciple\GoodExample\Interfaces\IHat.cs" />
+    <Compile Include="4-InterfaceSegregationPrinciple\GoodExample\Interfaces\IPants.cs" />
+    <Compile Include="4-InterfaceSegregationPrinciple\GoodExample\Interfaces\IProduct.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="5-DependencyInversionPrinciple\BadExample\" />
+    <Folder Include="5-DependencyInversionPrinciple\GoodExample\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="1-SingleResponsiblePrinciple\TeoricSRP.txt" />
+    <Content Include="2-OpenClosedPrinciple\Teoric.txt" />
+    <Content Include="3-LiskovSubstitutionPrinciple\Teoric.txt" />
+    <Content Include="4-InterfaceSegregationPrinciple\Teoric.txt" />
+    <Content Include="5-DependencyInversionPrinciple\Teoric.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

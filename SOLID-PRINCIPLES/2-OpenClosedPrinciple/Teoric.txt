@@ -1,0 +1,25 @@
+﻿
+Open Closed Principle
+
+What is the Open-Closed Principle in C#?
+The Open-Closed Principle states that “software entities such as modules, classes, functions, etc. should be open for extension, but closed for modification“.
+
+Let us understand the above definition in simple words. Here we need to understand two things. The first thing is Open for extension and the second thing is Closed for modification,
+
+The Open for extension means we need to design the software modules/classes in such a way that the new responsibilities or functionalities should be added easily when new requirements come. On the other hand, Closed for modification means, we should not modify the class/module until we find some bugs.
+
+The reason for this is, we have already developed a class/module and it has gone through the unit testing phase. So we should not have to change this as it affects the existing functionalities. In simple words, we can say that we should develop an entity in such a way that it should allow its behavior to be extended without altering its source code.
+
+Implementation Guidelines for the Open-Closed Principle in C#
+The easiest way to implement the Open-Closed Principle in C# is to add the new functionalities by creating new derived classes which should be inherited from the original base class.
+Another way is to allow the client to access the original class with an abstract interface.
+So, at any given point of time when there is a change in requirement or any new requirement comes then instead of touching the existing functionality, it’s always better and suggested to create new derived classes and leave the original class implementation as it is.
+Problems of Not following the Open-Closed Principle in C#: 
+If you are not following the Open-Closed Principle during the application development process, then you may end up your application development with the following problems
+
+If you allow a class or function to add new logic then as a developer you need to test the entire functionalities which include the old functionalities as well as new the functionalities of the application.
+As a developer, it is also your responsibility to tell the QA (Quality Assurance) team about the changes in advance so that they can prepare themselves in advance for regression testing along with the new feature testing.
+If you are not following the Open-Closed Principle, then it also breaks the Single Responsibility Principle as the class or module is going to perform multiple responsibilities.
+If you are implementing all the functionalities in a single class, then the maintenance of the class becomes very difficult.
+Because of the above key points, we need to follow the open-closed principle in C# while developing the application.
+
