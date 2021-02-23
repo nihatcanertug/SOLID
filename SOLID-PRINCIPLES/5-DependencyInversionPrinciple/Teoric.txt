@@ -1,4 +1,0 @@
-﻿
-The Dependency Inversion Principle (DIP)
- 
-The Dependency Inversion Principle (DIP) states that a high-level class must not depend upon a lower level class. They must both depend upon abstractions. And, secondly, an abstraction must not depend upon details, but the details must depend upon abstractions. This will ensure the class and ultimately the whole application is very robust and easy to maintain and expand, if required. Let us look at this with an example.
