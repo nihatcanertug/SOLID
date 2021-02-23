@@ -1,0 +1,7 @@
+﻿
+Interface Segregation Principle
+
+The Interface Segregation Principle states that no client code object should be forced to depend on methods it does not use. Basically, each code object should only implement what it needs, and not be required to implement anything else.
+
+Benefits
+The ISP is all about reducing code objects down to their smallest possible implementation, and removing dependencies the object doesn't need to function properly. The result of implementing this principle, generally speaking, is to have a lot of small, focused interfaces that define only what is needed by their implementations.
